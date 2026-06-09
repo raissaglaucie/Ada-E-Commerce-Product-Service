@@ -65,8 +65,6 @@ def delete_product(product_id):
     return Response(status=204, mimetype="application/json")
 
 
-@bp.get('/health')
+@bp.route('/health')
 def health():
-    return {
-        "status": "healthy"
-    }, 200
+    return {'status': 'healthy', 'version': '1.0.1'}, 200
